@@ -116,6 +116,9 @@ export NVM_DIR="$HOME/.nvm"
 
 alias tmux='tmux -f ~/.config/tmux/tmux.conf'
 
+alias gs='git status'
+alias ll 'ls -al'
+:
 export STARSHIP_CONFIG="~/.config/starship/starship.toml"
 
 eval "$(starship init zsh)"

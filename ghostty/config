@@ -1,0 +1,10 @@
+macos-option-as-alt = true
+theme = catppuccin-mocha
+font-family = "RobotoMono Nerd Font"
+window-height = 60 
+window-width = 120
+
+window-position-x = 1512
+window-position-y = 490
+
+
