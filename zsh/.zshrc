@@ -118,6 +118,8 @@ alias tmux='tmux -f ~/.config/tmux/tmux.conf'
 
 alias gs='git status'
 alias ga='git add'
+alias gd="git diff'
+alias gl='git log'
 gc() {
     if [ $# -eq 0 ]; then
         git commit
