@@ -7,4 +7,8 @@ window-width = 120
 window-position-x = 1512
 window-position-y = 490
 
-
+keybind = alt+5=text:[
+keybind = alt+6=text:]
+keybind = alt+7=text:|
+keybind = alt+8=text:{
+keybind = alt+9=text:}
