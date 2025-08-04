@@ -16,10 +16,6 @@ echo -e "${YELLOW}📁 Dotfiles directory: $DOTFILES_DIR${NC}"
 echo -e "${BLUE}📦 Installing prerequisites...${NC}"
 sudo apt-get update
 sudo apt-get install -y \
-    build-essential \
-    procps \
-    curl \
-    file \
     git \
     ca-certificates
 
