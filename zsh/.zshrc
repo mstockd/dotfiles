@@ -1,7 +1,10 @@
 HIST_STAMPS="dd/mm/yyyy"
 
-# homebrew
-eval "$(/opt/homebrew/bin/brew shellenv)"
+if [ -f "/opt/homebrew/bin/brew" ]; then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+elif [ -f "/home/linuxbrew/.linuxbrew/bin/brew" ]; then
+    eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+fi
 
 # nvm via brew
 export NVM_DIR="$HOME/.nvm"
