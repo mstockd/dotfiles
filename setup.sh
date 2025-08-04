@@ -19,6 +19,7 @@ sudo apt-get update
 sudo apt-get install -y \
     build-essential \
     git \
+    locales \
     ca-certificates \
     libncurses-dev \
     libreadline-dev \
@@ -29,6 +30,7 @@ sudo apt-get install -y \
     libicu-dev \
     libacl1-dev \
     libunistring-dev
+sudo locale-gen en_US.UTF-8
 
 echo -e "${BLUE}🍺 Installing Homebrew...${NC}"
 if ! command -v brew &> /dev/null; then
