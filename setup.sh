@@ -13,12 +13,22 @@ echo -e "${BLUE}🚀 Setting up development environment...${NC}"
 DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 echo -e "${YELLOW}📁 Dotfiles directory: $DOTFILES_DIR${NC}"
 
+# other than git and certs, all of these are used by neovim and faster to install with apt than as implicit brew dependencies
 echo -e "${BLUE}📦 Installing prerequisites...${NC}"
 sudo apt-get update
 sudo apt-get install -y \
     build-essential \
     git \
-    ca-certificates
+    ca-certificates \
+    libncurses-dev \
+    libreadline-dev \
+    zlib1g-dev \
+    libxml2-dev \
+    gettext \
+    libuv1-dev \
+    libicu-dev \
+    libacl1-dev \
+    libunistring-dev
 
 echo -e "${BLUE}🍺 Installing Homebrew...${NC}"
 if ! command -v brew &> /dev/null; then

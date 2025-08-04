@@ -13,6 +13,7 @@ export NVM_DIR="$HOME/.nvm"
 
 alias tmux='tmux -f ~/.config/tmux/tmux.conf'
 
+alias gp='git push'
 alias gs='git status'
 alias ga='git add'
 alias gd='git diff'
