@@ -16,7 +16,7 @@ echo -e "${YELLOW}📁 Dotfiles directory: $DOTFILES_DIR${NC}"
 # other than git and certs, all of these are used by neovim and faster to install with apt than as implicit brew dependencies
 echo -e "${BLUE}📦 Installing prerequisites...${NC}"
 sudo apt-get update
-sudo apt-get install -y \
+sudo apt-get install -y --no-install-recommends \
     build-essential \
     git \
     locales \
@@ -29,7 +29,9 @@ sudo apt-get install -y \
     libuv1-dev \
     libicu-dev \
     libacl1-dev \
-    libunistring-dev
+    libunistring-dev \
+    && apt-get clean && rm -rf /var/lib/apt/lists/*
+
 sudo locale-gen en_US.UTF-8
 
 echo -e "${BLUE}🍺 Installing Homebrew...${NC}"
@@ -51,6 +53,9 @@ brew install \
     fd \
     tree \
     jq
+
+echo -e "${BLUE}📦 Installing Claude Code...${NC}"
+curl -fsSL https://claude.ai/install.sh | bash
 
 echo -e "${BLUE}🔧 Configuring shell environment...${NC}"
 

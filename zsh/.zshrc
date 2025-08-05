@@ -10,6 +10,10 @@ elif [ -f "/home/linuxbrew/.linuxbrew/bin/brew" ]; then
     eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 fi
 
+if [[ "$TERM" == "xterm-ghostty" ]] && ! infocmp "$TERM" &>/dev/null; then
+    export TERM="xterm-256color"
+fi
+
 # nvm via brew
 export NVM_DIR="$HOME/.nvm"
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
@@ -32,6 +36,8 @@ gc() {
 
 alias ll='ls -alF'
 alias vim='nvim'
+alias goclaude='claude --dangerously-skip-permissions'
+
 export STARSHIP_CONFIG="~/.config/starship/starship.toml"
 
 eval "$(starship init zsh)"
