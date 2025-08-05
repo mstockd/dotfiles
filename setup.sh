@@ -56,12 +56,7 @@ brew install \
 
 echo -e "${BLUE}📦 Installing Claude Code...${NC}"
 if ! command -v claude >/dev/null 2>&1; then
-    timeout 600 curl -fsSL https://claude.ai/install.sh | bash || {
-        echo "Installation timed out, retrying..."
-        pkill -f claude 2>/dev/null || true
-        sleep 5
-        curl -fsSL https://claude.ai/install.sh | bash
-    }
+    curl -fsSL https://claude.ai/install.sh | bash
 else
     echo "Claude already installed: $(which claude)"
 fi
