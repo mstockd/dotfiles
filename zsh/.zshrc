@@ -42,3 +42,8 @@ export STARSHIP_CONFIG="~/.config/starship/starship.toml"
 
 eval "$(starship init zsh)"
 
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/main/.cache/lm-studio/bin"
+# End of LM Studio CLI section
+
